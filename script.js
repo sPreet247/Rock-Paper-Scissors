@@ -6,11 +6,11 @@ function computerPlay() {
   return things[Random];
 }
 
-function game() {
-  function playRound(playerSelection, computerSelection) {
-    if (playerSelection.toLowerCase() !== computerSelection.toLowerCase()) {
-      return "You Lose! Paper beats Rock";
-    }
+function game() {}
+
+function playRound(playerSelection, computerSelection) {
+  if (playerSelection.toLowerCase() !== computerSelection.toLowerCase()) {
+    return "You Lose! Paper beats Rock";
   }
 }
 
