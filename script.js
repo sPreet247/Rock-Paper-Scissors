@@ -1,9 +1,9 @@
 "use strict";
-const things = ["Rock", "Paper", "Scissors"];
 
 function computerPlay() {
-  const Random = Math.floor(Math.random() * things.length);
-  return things[Random];
+  const choices = ["Rock", "Paper", "Scissors"];
+  const Random = Math.floor(Math.random() * choices.length);
+  return choices[Random];
 }
 
 function playRound(playerSelection, computerSelection) {
