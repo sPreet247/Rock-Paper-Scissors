@@ -6,14 +6,17 @@ function computerPlay() {
   return things[Random];
 }
 
-function game() {}
-
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection.toLowerCase() !== computerSelection.toLowerCase()) {
+  if (
+    playerSelection.toLowerCase() &&
+    computerSelection.toLowerCase() === "paper"
+  ) {
     return "You Lose! Paper beats Rock";
   }
 }
 
-const playerSelection = "Rock";
+function game() {}
+
+const playerSelection = prompt("Please select");
 const computerSelection = computerPlay();
-playRound(playerSelection, computerSelection);
+console.log(playRound(playerSelection, computerSelection));
