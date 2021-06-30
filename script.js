@@ -7,11 +7,19 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  if (
-    playerSelection.toLowerCase() &&
-    computerSelection.toLowerCase() === "paper"
+  if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
+    return "Game Has Tied";
+  } else if (
+    (playerSelection.toLowerCase() === "rock" &&
+      computerSelection.toLowerCase() === "scissors") ||
+    (playerSelection.toLowerCase() === "paper" &&
+      computerSelection.toLowerCase() === "rock") ||
+    (playerSelection.toLowerCase() === "scissors" &&
+      computerSelection.toLowerCase() === "paper")
   ) {
-    return "You Lose! Paper beats Rock";
+    return "You Win";
+  } else {
+    return " computer wins";
   }
 }
 
