@@ -23,8 +23,9 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {}
+function game() {
+  const playerSelection = prompt("Please Enter your selection");
+  const computerSelection = computerPlay();
+}
 
-const playerSelection = prompt("Please select");
-const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
