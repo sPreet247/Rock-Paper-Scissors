@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.color {
+  border: 6px solid yellow;
+  margin: 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
