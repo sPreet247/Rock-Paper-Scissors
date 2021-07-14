@@ -1,5 +1,8 @@
 "use strict";
 
+const Button = document.querySelectorAll("button");
+Button.addEventListener("click", playRound);
+
 function computerPlay() {
   const choices = ["Rock", "Paper", "Scissors"];
   const Random = Math.floor(Math.random() * choices.length);
