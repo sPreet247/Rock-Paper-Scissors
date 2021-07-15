@@ -4,6 +4,16 @@ const Rock = document.querySelector(".rock");
 const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
 
+Rock.addEventListener("click", (e) => {
+  console.log(e);
+});
+Paper.addEventListener("click", (e) => {
+  console.log(e);
+});
+Scissors.addEventListener("click", (e) => {
+  console.log(e);
+});
+
 function computerPlay() {
   const choices = ["Rock", "Paper", "Scissors"];
   const Random = Math.floor(Math.random() * choices.length);
