@@ -1,7 +1,8 @@
 "use strict";
 
-const Button = document.querySelectorAll("button");
-Button.addEventListener("click", playRound);
+const Rock = document.querySelector(".rock");
+const Paper = document.querySelector(".paper");
+const Scissors = document.querySelector(".scissors");
 
 function computerPlay() {
   const choices = ["Rock", "Paper", "Scissors"];
