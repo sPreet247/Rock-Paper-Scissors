@@ -4,9 +4,7 @@ const Rock = document.querySelector(".rock");
 const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
 
-Rock.addEventListener("click", (e) => {
-  console.log("button clicked");
-});
+Rock.addEventListener("click", playRound);
 Paper.addEventListener("click", (e) => {
   console.log("button clicked");
 });
@@ -38,8 +36,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-  const playerSelection = prompt("Please Enter your selection");
+  const playerSelection = document.querySelectorAll("button");
   const computerSelection = computerPlay();
 
-  return playRound(playerSelection, computerSelection);
+  console.log(playRound(playerSelection, computerSelection));
 }
