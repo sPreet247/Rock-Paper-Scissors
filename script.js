@@ -5,13 +5,13 @@ const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
 
 Rock.addEventListener("click", (e) => {
-  console.log(e);
+  console.log("button clicked");
 });
 Paper.addEventListener("click", (e) => {
-  console.log(e);
+  console.log("button clicked");
 });
 Scissors.addEventListener("click", (e) => {
-  console.log(e);
+  console.log("button clicked");
 });
 
 function computerPlay() {
