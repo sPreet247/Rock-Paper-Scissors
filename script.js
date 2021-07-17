@@ -8,9 +8,7 @@ Rock.addEventListener("click", playRound);
 Paper.addEventListener("click", (e) => {
   console.log("button clicked");
 });
-Scissors.addEventListener("click", (e) => {
-  console.log("button clicked");
-});
+Scissors.addEventListener("click", (e) => {});
 
 function computerPlay() {
   const choices = ["Rock", "Paper", "Scissors"];
