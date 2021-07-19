@@ -7,9 +7,15 @@ const Scissors = document.querySelector(".scissors");
 Rock.addEventListener("click", () => {
   console.log(playRound((Rock.playerSelection = "rock"), computerSelection));
 });
-// Paper.addEventListener("click", playRound(Paper));
+Paper.addEventListener("click", () => {
+  console.log(playRound((Paper.playerSelection = "paper"), computerSelection));
+});
 
-// Scissors.addEventListener("click", console.log(playRound("scissors")));
+Scissors.addEventListener("click", () => {
+  console.log(
+    playRound((Scissors.playerSelection = "scissors"), computerSelection)
+  );
+});
 
 function computerPlay() {
   const choices = ["Rock", "Paper", "Scissors"];
