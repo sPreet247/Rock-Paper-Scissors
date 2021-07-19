@@ -6,10 +6,10 @@ const Scissors = document.querySelector(".scissors");
 
 Rock.addEventListener("click", playRound);
 Paper.addEventListener("click", (e) => {
-  console.log("button clicked");
+  console.log("clicked");
 });
 Scissors.addEventListener("click", (e) => {
-  console.log("btn clicked");
+  console.log("clicked");
 });
 
 function computerPlay() {
