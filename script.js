@@ -1,13 +1,15 @@
 "use strict";
 
-const Rock = document.querySelector(".rock");
+const Rock = document.querySelector("button.rock");
 const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
 
-Rock.addEventListener("click", playRound(Rock));
-Paper.addEventListener("click", playRound(Paper));
+Rock.addEventListener("click", () => {
+  console.log(playRound((Rock.playerSelection = "rock"), computerSelection));
+});
+// Paper.addEventListener("click", playRound(Paper));
 
-Scissors.addEventListener("click", console.log(playRound(Scissors)));
+// Scissors.addEventListener("click", console.log(playRound("scissors")));
 
 function computerPlay() {
   const choices = ["Rock", "Paper", "Scissors"];
@@ -32,9 +34,11 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function game() {
-  let playerSelection = document.querySelectorAll("button");
-  const computerSelection = computerPlay();
+let playerSelection;
+let computerSelection = computerPlay();
 
-  console.log(playRound(playerSelection, computerSelection));
-}
+// function game() {
+//   let playerSelection = document.querySelectorAll("button");
+//   let computerSelection = computerPlay();
+//   console.log(playRound(playerSelection, computerSelection));
+// }
