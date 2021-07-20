@@ -5,17 +5,15 @@ const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
 
 Rock.addEventListener("click", () => {
-  console.log(playRound((Rock.playerSelection = "rock"), computerSelection));
+  console.log(playRound((Rock.playerSelection = "rock")));
 });
 Paper.addEventListener("click", () => {
-  console.log(playRound((Paper.playerSelection = "paper"), computerSelection));
+  console.log(playRound((Paper.playerSelection = "paper")));
 });
 
-// Scissors.addEventListener("click", () => {
-//   console.log(
-//     playRound((Scissors.playerSelection = "scissors"), computerSelection)
-//   );
-// });
+Scissors.addEventListener("click", () => {
+  console.log(playRound((Scissors.playerSelection = "scissors")));
+});
 
 function computerPlay() {
   const choices = ["Rock", "Paper", "Scissors"];
@@ -23,7 +21,8 @@ function computerPlay() {
   return choices[Random];
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection) {
+  let computerSelection = computerPlay();
   if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
     return "Game Has Tied";
   } else if (
@@ -39,12 +38,3 @@ function playRound(playerSelection, computerSelection) {
     return " computer wins";
   }
 }
-
-let playerSelection;
-let computerSelection = computerPlay();
-
-// function game() {
-//   let playerSelection = document.querySelectorAll("button");
-//   let computerSelection = computerPlay();
-//   console.log(playRound(playerSelection, computerSelection));
-// }
