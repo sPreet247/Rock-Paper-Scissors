@@ -40,7 +40,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-let playerSelection;
+let playerSelection = document.querySelectorAll("button");
 let computerSelection = computerPlay();
 
 // function game() {
