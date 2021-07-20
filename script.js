@@ -11,11 +11,11 @@ Paper.addEventListener("click", () => {
   console.log(playRound((Paper.playerSelection = "paper"), computerSelection));
 });
 
-Scissors.addEventListener("click", () => {
-  console.log(
-    playRound((Scissors.playerSelection = "scissors"), computerSelection)
-  );
-});
+// Scissors.addEventListener("click", () => {
+//   console.log(
+//     playRound((Scissors.playerSelection = "scissors"), computerSelection)
+//   );
+// });
 
 function computerPlay() {
   const choices = ["Rock", "Paper", "Scissors"];
@@ -24,15 +24,15 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  if (playerSelection.toLowerCase() === computerSelection.toLowerCase()) {
+  if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
     return "Game Has Tied";
   } else if (
-    (playerSelection.toLowerCase() === "rock" &&
-      computerSelection.toLowerCase() === "scissors") ||
-    (playerSelection.toLowerCase() === "paper" &&
-      computerSelection.toLowerCase() === "rock") ||
-    (playerSelection.toLowerCase() === "scissors" &&
-      computerSelection.toLowerCase() === "paper")
+    (playerSelection.toLowerCase() == "rock" &&
+      computerSelection.toLowerCase() == "scissors") ||
+    (playerSelection.toLowerCase() == "paper" &&
+      computerSelection.toLowerCase() == "rock") ||
+    (playerSelection.toLowerCase() == "scissors" &&
+      computerSelection.toLowerCase() == "paper")
   ) {
     return "You Win";
   } else {
@@ -40,7 +40,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// let playerSelection = document.querySelectorAll("button");
+let playerSelection;
 let computerSelection = computerPlay();
 
 // function game() {
