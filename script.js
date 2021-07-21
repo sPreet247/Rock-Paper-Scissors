@@ -3,6 +3,8 @@
 const Rock = document.querySelector("button.rock");
 const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
+const playerScores = document.querySelector(".player-score");
+const computerScores = document.querySelector(".computer-score");
 
 Rock.addEventListener("click", () => {
   console.log(playRound((Rock.playerSelection = "rock")));
@@ -34,7 +36,9 @@ function playRound(playerSelection) {
       computerSelection.toLowerCase() == "paper")
   ) {
     return "You Win";
+    playerScores++;
   } else {
     return " computer wins";
+    computerScores++;
   }
 }

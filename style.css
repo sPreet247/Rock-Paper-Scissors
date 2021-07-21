@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 .color {
@@ -15,4 +15,14 @@
 h1 {
   text-align: center;
   margin-top: 1rem;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+span {
+  font-size: 5rem;
 }
