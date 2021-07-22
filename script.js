@@ -1,6 +1,6 @@
 "use strict";
 
-const Rock = document.querySelector("button.rock");
+const Rock = document.querySelector(".rock");
 const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
 const playerScores = document.querySelector(".player-score");
