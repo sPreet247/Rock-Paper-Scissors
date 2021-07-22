@@ -6,6 +6,8 @@ const Scissors = document.querySelector(".scissors");
 const playerScores = document.querySelector(".player-score");
 const computerScores = document.querySelector(".computer-score");
 
+let score = 0;
+
 Rock.addEventListener("click", () => {
   console.log(playRound((Rock.playerSelection = "rock")));
 });
