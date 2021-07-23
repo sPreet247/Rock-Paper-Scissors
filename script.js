@@ -10,14 +10,14 @@ let player = 0;
 let computer = 0;
 
 Rock.addEventListener("click", () => {
-  console.log(playRound((Rock.playerSelection = "rock")));
+  playRound((Rock.playerSelection = "rock"));
 });
 Paper.addEventListener("click", () => {
-  console.log(playRound((Paper.playerSelection = "paper")));
+  playRound((Paper.playerSelection = "paper"));
 });
 
 Scissors.addEventListener("click", () => {
-  console.log(playRound((Scissors.playerSelection = "scissors")));
+  playRound((Scissors.playerSelection = "scissors"));
 });
 
 function computerPlay() {
@@ -42,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
     result.innerText = `You Win! ${playerSelection} beats ${computerSelection}`;
   } else {
     computer++;
-    result.innerText = `computer wins ${computerSelection} beats ${playerSelection}`;
+    result.innerText = `computer wins! ${computerSelection} beats ${playerSelection}`;
   }
 }
 
