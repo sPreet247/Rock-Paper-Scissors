@@ -5,6 +5,7 @@ const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
 const playerScores = document.querySelector(".player-score");
 const computerScores = document.querySelector(".computer-score");
+const result = document.querySelector(".result");
 let player = 0;
 let computer = 0;
 
@@ -37,16 +38,16 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection.toLowerCase() == "scissors" &&
       computerSelection.toLowerCase() == "paper")
   ) {
-    player += 1;
-    return `You Win! ${playerSelection} beats ${computerSelection}`;
+    player++;
+    result.innerText = `You Win! ${playerSelection} beats ${computerSelection}`;
   } else {
-    computer += 1;
-    return `computer wins ${computerSelection} beats ${playerSelection}`;
+    computer++;
+    result.innerText = `computer wins ${computerSelection} beats ${playerSelection}`;
   }
 }
 
-function game() {
-  for (let i = 0; i < 5; i++) {
-    playRound;
-  }
-}
+// function score() {
+//   if (player == 5 || computer == 5) {
+//     result.innerText = "Refresh browser to play again";
+//   }
+// }
