@@ -5,9 +5,11 @@ const Paper = document.querySelector(".paper");
 const Scissors = document.querySelector(".scissors");
 const playerScores = document.querySelector(".player-score");
 const computerScores = document.querySelector(".computer-score");
+let player = 0;
+let computer = 0;
 
 Rock.addEventListener("click", () => {
-  console.log(playRound((Rock.playerSelection = "rock")));
+  console.log(game((Rock.playerSelection = "rock")));
 });
 Paper.addEventListener("click", () => {
   console.log(playRound((Paper.playerSelection = "paper")));
@@ -35,10 +37,10 @@ function playRound(playerSelection) {
     (playerSelection.toLowerCase() == "scissors" &&
       computerSelection.toLowerCase() == "paper")
   ) {
+    player++;
     return "You Win";
-    playerScores++;
   } else {
+    computer++;
     return " computer wins";
-    computerScores++;
   }
 }
