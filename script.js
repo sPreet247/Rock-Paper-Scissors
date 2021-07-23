@@ -9,7 +9,7 @@ let player = 0;
 let computer = 0;
 
 Rock.addEventListener("click", () => {
-  console.log(game((Rock.playerSelection = "rock")));
+  console.log(playRound((Rock.playerSelection = "rock")));
 });
 Paper.addEventListener("click", () => {
   console.log(playRound((Paper.playerSelection = "paper")));
@@ -25,8 +25,8 @@ function computerPlay() {
   return choices[Random];
 }
 
-function playRound(playerSelection) {
-  let computerSelection = computerPlay();
+function playRound(playerSelection, computerSelection) {
+  computerSelection = computerPlay();
   if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
     return "Game Has Tied";
   } else if (
@@ -37,10 +37,16 @@ function playRound(playerSelection) {
     (playerSelection.toLowerCase() == "scissors" &&
       computerSelection.toLowerCase() == "paper")
   ) {
-    player++;
-    return "You Win";
+    player += 1;
+    return `You Win! ${playerSelection} beats ${computerSelection}`;
   } else {
-    computer++;
-    return " computer wins";
+    computer += 1;
+    return `computer wins ${computerSelection} beats ${playerSelection}`;
+  }
+}
+
+function game() {
+  for (let i = 0; i < 5; i++) {
+    playRound;
   }
 }
