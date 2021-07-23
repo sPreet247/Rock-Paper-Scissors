@@ -10,14 +10,14 @@ let player = 0;
 let computer = 0;
 
 Rock.addEventListener("click", () => {
-  playRound((Rock.playerSelection = "rock"));
+  playRound("rock");
 });
 Paper.addEventListener("click", () => {
-  playRound((Paper.playerSelection = "paper"));
+  playRound("paper");
 });
 
 Scissors.addEventListener("click", () => {
-  playRound((Scissors.playerSelection = "scissors"));
+  playRound("scissors");
 });
 
 function computerPlay() {
