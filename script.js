@@ -38,15 +38,16 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection.toLowerCase() == "scissors" &&
       computerSelection.toLowerCase() == "paper")
   ) {
-    player++;
+    player += 1;
     result.innerText = `You Win! ${playerSelection} beats ${computerSelection}`;
   } else {
-    computer++;
+    computer += 1;
     result.innerText = `computer wins! ${computerSelection} beats ${playerSelection}`;
   }
 }
 
 // function score() {
+//   playRound;
 //   if (player == 5 || computer == 5) {
 //     result.innerText = "Refresh browser to play again";
 //   }
