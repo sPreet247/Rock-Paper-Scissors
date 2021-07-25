@@ -39,9 +39,11 @@ function playRound(playerSelection, computerSelection) {
       computerSelection.toLowerCase() == "paper")
   ) {
     player += 1;
+    playerScores.innerText = `${player}`;
     result.innerText = `You Win! ${playerSelection} beats ${computerSelection}`;
   } else {
     computer += 1;
+    computerScores.innerText = `${computer}`;
     result.innerText = `computer wins! ${computerSelection} beats ${playerSelection}`;
   }
 }
