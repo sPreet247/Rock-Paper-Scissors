@@ -29,7 +29,7 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
   computerSelection = computerPlay();
   if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
-    return "Game Has Tied";
+    result.innerText = "Game Has Tied";
   } else if (
     (playerSelection.toLowerCase() == "rock" &&
       computerSelection.toLowerCase() == "scissors") ||
