@@ -6,6 +6,7 @@ const Scissors = document.querySelector(".scissors");
 const playerScores = document.querySelector(".player-score");
 const computerScores = document.querySelector(".computer-score");
 const result = document.querySelector(".result");
+const winner = document.querySelector(".winner");
 let player = 0;
 let computer = 0;
 
@@ -50,7 +51,9 @@ function playRound(playerSelection, computerSelection) {
 
 // function score() {
 //   playRound;
-//   if (player == 5 || computer == 5) {
-//     result.innerText = "Refresh browser to play again";
+//   if (player == 5) {
+//     winner.innerText = "Player Wins. Refresh the browser to play again.";
+//   } else if (computer == 5) {
+//     winner.innerText = "Computer Wins. Refresh the browser to play again.";
 //   }
 // }
